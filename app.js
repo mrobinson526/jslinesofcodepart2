@@ -21,13 +21,16 @@ for (let friend=0; friend<friends.length; friend++) {
         if (i>2) {
             let y=i + "<p>lines of code in the file</p>" + i + "<p>lines of code.</p>" + friends[friend] + "<p>strikes one out, clears it all out, </p>" + (i--) + "<p>lines of code in the file.</p>";
             document.getElementById("text").innerHTML=y;
+            container.appendChild(y);
         } else if (i==2) {
             let y=i + "<p>lines of code in the file</p>" + i + "<p>lines of code.</p>" + friends[friend] + "<p>strikes one out, clears it all out, </p>" + (i--) + "<p>line of code in the file.</p>";
             document.getElementById("text").innerHTML=y;
+            container.appendChild(y);
         } else {
             let str=("line")
             let y=i + "<p>line of code in the file</p>" + i + "<p>line of code.</p>" + friends[friend] + "<p>strikes one out, clears it all out, </p>" + (i--) + "<p>no more lines of code in the file.</p>";
             document.getElementById("text").innerHTML=y;
+            container.appendChild(y);
         counter++;
         }
     }
