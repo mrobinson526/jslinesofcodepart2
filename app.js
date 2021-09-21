@@ -19,12 +19,15 @@ for (let friend=0; friend<friends.length; friend++) {
     for (let i=99; i>0; i--) {
         let str=("lines")
         if (i>2) {
-        console.log(i + " " + str + " of code in the file, " + i + " " + str + " of code:  " + friends[friend] + " " + "strikes one out, clears it all out ", + (i-1) + "lines of code");
+            let y=i + "<p>lines of code in the file</p>" + i + "<p>lines of code.</p>" + friends[friend] + "<p>strikes one out, clears it all out, </p>" + (i--) + "<p>lines of code in the file.</p>";
+            document.getElementById("text").innerHTML=y;
         } else if (i==2) {
-            console.log(i + " " + str + " of code in the file, " + i + " " + str + " of code:  " + friends[friend] + " " + "strikes one out, clears it all out ", + (i-1) + "line of code");
+            let y=i + "<p>lines of code in the file</p>" + i + "<p>lines of code.</p>" + friends[friend] + "<p>strikes one out, clears it all out, </p>" + (i--) + "<p>line of code in the file.</p>";
+            document.getElementById("text").innerHTML=y;
         } else {
             let str=("line")
-            console.log(i + " " + str + " of code in the file, " + i + " " + str + " of code:  " + friends[friend] + " " + "strikes one out, clears it all out ", "no more lines of code");
+            let y=i + "<p>line of code in the file</p>" + i + "<p>line of code.</p>" + friends[friend] + "<p>strikes one out, clears it all out, </p>" + (i--) + "<p>no more lines of code in the file.</p>";
+            document.getElementById("text").innerHTML=y;
         counter++;
         }
     }
