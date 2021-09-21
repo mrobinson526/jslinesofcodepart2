@@ -1,13 +1,10 @@
 window.addEventListener("DOMContentLoaded", function () {
-    let singBtn = document.querySelector(".sing-btn");
     let counter=1;
-
      // Margaret G. Robinson
     // Create an array with 5 friends
   
-    singBtn.addEventListener("click", function() {
-    const friends = [ "Tony" , "Dianna" , "James" , "Mary" , "Joyce" 
-];
+    const friends = [ "Tony" , "Dianna" , "James" , "Mary" , "Joyce"];
+function sing() {
 for (let friend=0; friend<friends.length; friend++) {
     let container=document.createElement("div");
     container.className="friend";
@@ -17,6 +14,7 @@ for (let friend=0; friend<friends.length; friend++) {
     let h3friend=friends[friend];
     h3.appendChild(h3friend);
     container.appendChild(h3);
+    
     console.log(friends[friend])
     for (let i=99; i>0; i--) {
         let str=("lines")
@@ -31,5 +29,7 @@ for (let friend=0; friend<friends.length; friend++) {
         }
     }
 }
-    })
+    }
+    document.getElementById("btn-sing").addEventListener("click", sing);
 });
+
